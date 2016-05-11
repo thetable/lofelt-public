@@ -1,0 +1,271 @@
+/*
+ * Navigation
+ */
+#header {
+  height: 60px;
+}
+
+.transparent-header #header {
+    background-color: rgba(0,0,0,.7);
+}
+.header-inner {
+  padding: 10px 0 8px 105px;
+}
+
+@media screen and (max-width: 690px) {
+  .header-inner {
+    padding-left: 0px;
+  }
+}
+
+#header #logoImage {
+  width: 135px;
+}
+
+#headerNav nav a {
+  font-family: 'GalanoClassic-Medium';
+  letter-spacing: 0.1em;
+}
+
+#headerNav nav a:hover {
+  color: #2d4650 !important;
+}
+
+/*
+ * Banner image
+ */
+.desc-wrapper {
+  text-align: left;
+}
+
+@media screen and (min-width:700px) {
+  .desc-wrapper {
+    margin-left: 105px;
+  }
+}
+
+.transparent-header.view-list .banner-thumbnail-wrapper  {
+  padding: 330px 0 0;
+  @media screen and (max-width: 690px) {
+    padding-top: 140px;
+  }
+}
+// Pre-headline
+.desc-wrapper p:first-child {
+  font-family: 'GalanoClassic-Bold';
+  text-transform: uppercase;
+  font-size: 42px;
+  letter-spacing: 0.08em;
+  margin-bottom: -10px;
+}
+// Main headline
+.desc-wrapper p>strong {
+  font-family: 'GalanoClassic-Light';
+  font-size: 68px;
+  letter-spacing: 0;
+}
+// Button link
+.desc-wrapper p:last-child>a,
+body:not(.collection-type-gallery).banner-button-style-outline .desc-wrapper p:last-child>a
+{
+  font-size: 16px;
+  padding: 20px;
+  font-family: 'GalanoClassic-Medium';
+  letter-spacing: 0.1em;
+
+}
+// Button on mobile should be 16px too.
+@media only screen and (max-width: 640px) {
+  body:not(.collection-type-gallery) .desc-wrapper p:last-child>a {
+    font-size: 16px;
+  }
+}
+
+/*
+ * Main Typography
+ */
+*
+{
+  font-family: 'GalanoClassic-Regular', ', Helvetica';
+  letter-spacing: 0;
+}
+
+*, .transparent-header #header {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Text links
+.html-block a:not(.sqs-block-button-element) {
+  text-decoration: underline;
+}
+
+strong {
+  font-family: 'GalanoClassic-Semibold';
+  font-weight: normal;
+}
+
+// Buttons
+body:not(.button-style-default) .sqs-editable-button, body:not(.button-style-default) .sqs-editable-button-font {
+  font-family :'GalanoClassic-Medium';
+  font-size: 16px;
+  letter-spacing: 0.1em;
+}
+
+h1, h2 {
+  font-family: 'GalanoClassic-Regular';
+  letter-spacing: 0;
+}
+
+/*
+ * Quotes
+ */
+.quote-block figure {
+  padding: 0;
+  text-align: left;
+  color: #2d4650;
+}
+
+.quote-block .source {
+  font-size: 16px;
+  text-align: left;
+  color: #ff503c;
+  opacity: 1;
+}
+
+/*
+ * Forms
+ */
+label,
+fieldset .title{
+  font-size: 16px;
+}
+
+.form-wrapper .field-list .field  .field-element {
+  font-size: 13px;
+  font-family: 'GalanoClassic-Regular';
+}
+
+input {
+  font-family: 'GalanoClassic-Regular';
+}
+
+/*
+ * Quote
+ */
+blockquote {
+  font-family: 'GalanoClassic-Light';
+}
+// Quotation marks
+.quote-block blockquote>span:first-child {
+  display: none;
+}
+.quote-block .source {
+  margin-left: -4px;
+}
+figcaption.source::first-letter {
+  font-size: 0;
+}
+
+// Pre-footer / Newsletter
+.newsletter-block .newsletter-form-body {
+  padding: 0
+}
+.newsletter-block .newsletter-form-header-description p {
+  margin: 0
+}
+button.newsletter-form-button.sqs-system-button.sqs-editable-button-layout.sqs-editable-button-style.sqs-editable-button-shape {
+  vertical-align: middle;
+  height: 50px;
+}
+input.newsletter-form-field-element {
+  vertical-align: middle;
+}
+span.newsletter-form-button-label {
+  font-family: GalanoClassic-Medium;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+}
+.newsletter-block .newsletter-form-footnote p {
+  font-family: 'GalanoClassic-Regular';
+  font-size: 13px !important;
+}
+
+/*
+ * Footer
+ */
+.footer-inner .sqs-block-html {
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+#footer .html-block a, #footer .html-block a:visited {
+  border: none;
+}
+
+/*
+ * Page margins
+ */
+// Main content
+.page-content, .collection-type-index .page-content, .collection-type-page #content {
+  padding: 50px 32px 50px;
+  max-width: 650px;
+}
+
+// Non-index pages need less margin
+#page {
+  padding-top: 0;
+}
+
+.sqs-block-html .sqs-block-content>h1:first-child {
+  margin-top: 20px
+}
+
+// Pre-footer
+.footer-inner,
+.pre-footer-inner {
+  max-width: 650px;
+}
+
+.pre-footer-inner .sqs-layout {
+  padding: 70px 0;
+}
+
+@media screen and (max-width:690px) {
+  .pre-footer-inner .sqs-layout {
+     padding: 32px 20px;
+  }
+  .sqs-svg-icon--list.social-icon-alignment-right {
+    text-align: center;
+  }
+}
+
+// Footer
+@media screen and (min-width: 690px) {
+  .sqs-block-socialaccountlinks-v2 {
+//    width: 140px;
+  }
+  .footer-inner {
+    padding: 10px 0px 50px;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .socialaccountlinks-v2-block,
+  .sqs-block {
+//  width: 100%;
+  //  padding: 0;
+  }
+}
+
+// Open house page
+#collection-56ff9218f850820e70aa96a7 #page {
+  background-image: url('http://static1.squarespace.com/static/56c22ccdb09f95f2a778538b/t/56ffa4cb5559868c75f06aa6/1459594456138');
+  background-size: cover;
+  max-width: none;
+}
+#collection-56ff9218f850820e70aa96a7 #content p,
+#collection-56ff9218f850820e70aa96a7 label,
+#collection-56ff9218f850820e70aa96a7 .form-submission-text {
+  color: white;
+}
