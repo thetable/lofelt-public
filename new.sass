@@ -1,12 +1,68 @@
+@import "media-queries"
+
 $color-dark-grey: #3f5360
 $color-light-grey: #9ba5af
 $color-warm-red: #ff4338
 
+/*
+ * Page-specific styles
+ */
+#basslet-new,
+#basslet-features,
+#teamintro
+  p, li
+    font-size: 21px
+    line-height: 1.5em
+
+/*
+ * Typography
+ */
+a
+  color: $color-warm-red
+
+ul
+  padding-left: 1.3em
+
+/*
+ * Call to action in navigation
+ */
+.nav-button-style-outline.enable-nav-button #headerNav nav>div:not(.folder):last-child a,
+.nav-button-style-outline.enable-nav-button #sidecarNav nav>div:not(.folder):last-child a
+  background-color: $color-warm-red
+  color: white
+  border: none
+  &:hover
+    background-color: $color-dark-grey
+    // border-color: $color-dark-grey
+    color: white !important
+.enable-nav-button #headerNav nav>div:not(.folder):last-child a,
+.enable-nav-button #sidecarNav nav>div:not(.folder):last-child a
+  // padding: .7em 1.5em !important
+  font-family: 'GalanoClassic-Medium'
+  letter-spacing: 0.1em
+
 p
   color: $color-dark-grey
 
+h1, h2
+  color: $color-warm-red
+
+/*
+ * Buttons
+ */
+.desc-wrapper p:last-child>a,
+.sqs-editable-button,
+.newsletter-block .newsletter-form-button,
+input.button.sqs-system-button.sqs-editable-button
+  border: none !important
+  &:hover
+    background-color: $color-dark-grey
+
+/*
+ * Navigation
+ */
 #headerNav nav a
-  font-size: 16px
+  // font-size: 16px
 
   &:hover
     color: $color-dark-grey !important
@@ -15,31 +71,106 @@ p
     color: $color-warm-red !important
 
 
-// Banner area
+/*
+ * Banner area
+ */
+.transparent-header.view-list .banner-thumbnail-wrapper
+  padding-top: 270px
+
 .desc-wrapper p>strong
   font-family: 'GalanoClassic-Regular'
   font-size: 68px
   letter-spacing: 0
+  line-height: 1.3em
 
 
-// Newsletter
+// Mobile page margins
+@include mq($max-width: 690px)
+  .page-content,
+  .collection-type-index .page-content,
+  .collection-type-page #content
+    padding: 20px
+
+
+/*
+ * Quotes
+ */
+#quotes
+  background: $color-dark-grey
+  h1
+    color: white
+  h2, blockquote
+    color: white
+    font-family: 'GalanoClassic-Regular'
+    font-size: 24px
+    line-height: 1.3em
+  figcaption
+    color: $color-light-grey
+    letter-spacing: 0.05em
+
+  // Reset changes from main stylesheet that hide the dash
+  figcaption.source::first-letter
+    font-size: initial
+
+/*
+ * Newsletter
+ */
+.pre-footer-inner
+  max-width: 900px
+
 .newsletter-block
   .newsletter-form-header-title
     margin: 0
 
-  .newsletter-form-header-description,
-  .newsletter-form-footnote
-    p
-      color: white
+  .newsletter-form-header-description p
+    color: white
 
-// Footer
+  .newsletter-form-field-wrapper
+    width: 240px
+
+  .newsletter-form-field-element
+    padding: 1.1em 1em .9em 1em
+    color: $color-light-grey
+
+  .newsletter-form-footnote p
+    // color: $color-light-grey // Really? Inconsistent between jpg and doc
+    color: white
+    opacity: 1
+
+/*
+ * Social icons
+ */
+.social-icons-style-solid.social-icons-color-black .sqs-use--background
+  fill: #222
+
+
+/*
+ * Footer
+ */
 #footer
-  .html-block
-    a, a:visited
+  p
+    margin: 0
+    color: $color-light-grey
+
+  #secondaryNavWrapper
+    padding: 0
+  #footerBlocks:not(.empty)
+    margin-top: 0
+
+  nav:not(.social-account-list)
+    a,
+    a:visited,
+    label
       color: $color-dark-grey
       font-size: 16px
-      margin: 5px
-      text-decoration: none !important
       font-family: 'GalanoClassic-Regular'
-    a:hover
-      color: $color-warm-red
+      padding-bottom: 0
+      &:hover
+        color: $color-warm-red
+      span
+        letter-spacing: 0.1em
+
+// Center social icons on mobile
+@include mq($max-width: 690px)
+  .sqs-svg-icon--list.social-icon-alignment-left
+    text-align: center
