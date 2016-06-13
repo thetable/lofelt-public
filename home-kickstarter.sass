@@ -1,0 +1,34 @@
+#collection-575f03054d088e5e10835cbb
+  #page
+    padding: 0
+  #content
+    max-width: 900px
+    padding: 20px 0
+
+  .sqs-layout > .sqs-row
+    margin: 0
+
+  // Header
+  .desc-wrapper
+    p>strong
+      font-size: 66px
+      letter-spacing: 0.008em // Doesn't work
+      @include mq($max-width: 690px)
+        font-size: 40px
+
+    p
+      font-size: 28px
+      text-transform: none
+      font-family: 'GalanoClassic-Regular'
+      letter-spacing: .01em
+      @include mq($max-width: 690px)
+        font-size: 18px
+
+
+  // Press cloud
+  .margin-wrapper
+    margin-bottom: 0 !important
+
+  @include mq($max-width: 640px)
+    .sqs-gallery-design-grid-slide
+      width: 33% !important
